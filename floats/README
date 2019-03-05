@@ -34,6 +34,9 @@ where \Sigma is the covariance matrix for the uncertainty in your
 estimate, x is your latitude and longitude vector, and x_T is the true
 value.
 
+You should submit your predictions by 3pm Tuesday 19th March by email
+to colin.cotter@imperial.ac.uk
+
 You should spend the time before the release of these trajectories
 developing a strategy for making this estimate and training your
 strategy on the data.
