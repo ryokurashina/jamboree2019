@@ -1,0 +1,37 @@
+This data is a set of 600 Lagrangian trajectories from real
+oceanographic measurement campaigns.
+
+The data is stored in the JSON format, readable in Python using
+read_lagrangian.py in this directory.
+
+The data is a list of Python dictionaries, each containing data from
+one directory. The data is:
+dt: the time interval between measurements
+lat: the latitude of each measurement
+lon: the longitude of each measurement
+temp: the temperature of each measurement
+
+The data is not entirely clean, sometimes the Lagrangian devices go
+out of action, and the dataset contains NaNs at those points.
+
+THE CHALLENGE FOR THIS DATASET
+
+On Tuesday 19th March at 11am this repository will be updated with data for
+three more trajectories. The difference with these trajectories is
+that the mean latitude and longitude has been subtracted (the
+temperature will be unchanged). Your task is to provide an estimate of
+this mean latitude and longitude. You should also quantify your
+uncertainty in this estimate: provide a variance for the latitude and
+longitude in your estimate, or a covariance for both if you like.  The
+score for your prediction will be proportional to the log-likelihood of
+the true value given your prediction i.e. proportional to
+
+(x - x_T)^T\Sigma^{-1}(x-x_T)
+
+where \Sigma is the covariance matrix for the uncertainty in your
+estimate, x is your latitude and longitude vector, and x_T is the true
+value.
+
+You should spend the time before the release of these trajectories
+developing a strategy for making this estimate and training your
+strategy on the data.
