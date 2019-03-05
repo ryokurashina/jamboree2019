@@ -1,0 +1,40 @@
+This data is a record of meteorological measurements from the
+University of Reading weather station from the 4th September 2014 onwards.
+It provides hourly measurements of:
+Td: Dry bulb temperature
+RH: Relative humidity
+Sdur: Accumulated sunshine since 0000UTC
+Rain_accum_der: Accumulated rainfall since 0000UTC
+P: Station pressure
+U10: 10m wind speed
+
+The data is stored in the .csv format, readable using e.g. numpy in
+Python, the pandas library in Python, or in R, or whatever you like.
+
+Missing data is represented by blank entries i.e. the empty string.
+
+THE CHALLENGE FOR THIS DATASET
+
+Your challenge is to provide a prediction of these values at 1200UTC
+on Wednesday 20th March. You should also quantify your uncertainty in
+this estimate: provide a variance for the each of the values in your
+estimate, or a covariance if you like.  The score for your prediction
+will be proportional to the negative log-likelihood of the true value
+given your prediction i.e. proportional to
+
+(x - x_T)^T\Sigma^{-1}(x-x_T)
+
+where \Sigma is the covariance matrix for the uncertainty in your
+estimate (we will construct a diagonal matrix from your individual
+variances if you use those), x is your vector of 6 predictions, and
+x_T is the true value.
+
+You should submit your predictions by 3pm Tuesday 19th March by email
+to colin.cotter@imperial.ac.uk
+
+To make this prediction, you may use the data in this csv file, which
+you can refresh from https://metdata.reading.ac.uk/cgi-bin/MODE3.cgi
+by selecting "1-hour WMO-standard processed output" and selecting the
+appropriate variables. You may also make use of any other publically
+available datasets and forecasts. We would like you to present your
+prediction strategy to us in the 3pm-5pm presentation slot on Tuesday 19th March.
