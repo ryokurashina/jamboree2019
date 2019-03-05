@@ -16,15 +16,17 @@ out of action, and the dataset contains NaNs at those points.
 
 THE CHALLENGE FOR THIS DATASET
 
-On Tuesday 19th March at 11am this repository will be updated with data for
-three more trajectories. The difference with these trajectories is
-that the mean latitude and longitude has been subtracted (the
-temperature will be unchanged). Your task is to provide an estimate of
-this mean latitude and longitude. You should also quantify your
-uncertainty in this estimate: provide a variance for the latitude and
-longitude in your estimate, or a covariance for both if you like.  The
-score for your prediction will be proportional to the log-likelihood of
-the true value given your prediction i.e. proportional to
+On Tuesday 19th March at 11am this repository will be updated with
+data for three more trajectories. The difference with these
+trajectories is that the mean latitude and longitude has been
+subtracted (the temperature will be unchanged). Your task is to
+provide an estimate of this mean latitude and longitude, i.e. deduce
+from the structure of the data where in the world the Lagrangian
+trajectory is. You should also quantify your uncertainty in this
+estimate: provide a variance for the latitude and longitude in your
+estimate, or a covariance for both if you like.  The score for your
+prediction will be proportional to the log-likelihood of the true
+value given your prediction i.e. proportional to
 
 (x - x_T)^T\Sigma^{-1}(x-x_T)
 
@@ -35,3 +37,6 @@ value.
 You should spend the time before the release of these trajectories
 developing a strategy for making this estimate and training your
 strategy on the data.
+
+IMPORTANT: In this challenge you should only make use of this data and
+not any other available datasets.
