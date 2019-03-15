@@ -35,8 +35,10 @@ estimate (we will construct a diagonal matrix from your individual
 variances if you use those), x is your latitude and longitude vector,
 and x_T is the true value.
 
-You should submit your predictions by 3pm Tuesday 19th March by email
-to colin.cotter@imperial.ac.uk
+You should submit your predictions by 3pm Tuesday 19th March by adding
+the data to a public fork of this repository on Github (the same fork
+should be used for all three challenges in your group) and sending the
+SHA of the commit to colin.cotter@imperial.ac.uk.
 
 You should spend the time before the release of these trajectories
 developing a strategy for making this estimate and training your
